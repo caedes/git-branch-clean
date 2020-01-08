@@ -26,8 +26,8 @@ jobs:
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - uses: CultureHQ/actions-yarn@v1.0.1
+      - uses: Borales/actions-yarn@v2.1.0
       - run: yarn install
       - run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
